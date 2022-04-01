@@ -1,0 +1,30 @@
+<div class="contents row">
+  <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+
+    <div class="form-group">
+      <div class="forms">
+        <div class="form devise-form">
+          <div class="form-title"><%= f.label :email %></div>
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="form devise-form">
+          <div class="form-title"><%= f.label :password %></div>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="form devise-form">
+            <div class="form-title"><%= f.label :remember_me %></div>
+            <%= f.check_box :remember_me %>
+          </div>
+        <% end -%>
+      </div>
+
+      <div class="submit">
+        <%= f.submit "Log in" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>

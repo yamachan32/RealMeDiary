@@ -1,0 +1,40 @@
+<div class="contents row">
+  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+      <div class="forms">
+        <div class="form devise-form">
+          <div class="form-title"><%= f.label :name %></div>
+          <%= f.text_field :name, autofocus: true %>
+        </div>
+
+        <div class="form devise-form">
+          <div class="form-title"><%= f.label :email %></div>
+          <%= f.email_field :email %>
+        </div>
+
+        <div class="form devise-form">
+          <div class="form-title">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+              <span class="password">(<%= @minimum_password_length %>文字以上)</span>
+            <% end %>
+          </div>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="form devise-form">
+          <div class="form-title"><%= f.label :password_confirmation %></div>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+      </div>
+
+      <div class="submit">
+        <%= f.submit "Sign up" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>

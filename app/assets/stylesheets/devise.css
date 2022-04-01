@@ -1,0 +1,13 @@
+.devise-form{
+  margin-bottom: 10px;
+}
+
+.devise-form input{
+  width: 250px;
+  padding: 0 5px;
+}
+
+.password{
+  font-family: initial;
+  font-size: initial;
+}
