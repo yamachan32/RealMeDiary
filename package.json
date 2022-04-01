@@ -1,5 +1,5 @@
 {
-  "name": "RealMeDiary",
+  "name": "real-me-diary",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
@@ -11,5 +11,8 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^4.7.4"
+  },
+  "engines" : {
+    "node": "14.19.0"
   }
 }
