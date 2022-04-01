@@ -1,5 +1,3 @@
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 <div class="wrapper">
 
   <div class="error-bar">
@@ -48,11 +46,11 @@
             <div class="show-content right">
               <div class="content-title">Image:</div>
               <% if @diary.images.attached? %>
-                <div class="slider">
-                  <% @diary.images.each do |image| %>
+                <% @diary.images.each do |image| %>
+                  <div class="slider">
                     <%= image_tag image %>
-                  <% end %>
-                </div>
+                  </div>
+                <% end %>
               <% else %>
                 <div class="no-attached">画像はありません</div>
               <% end %>
