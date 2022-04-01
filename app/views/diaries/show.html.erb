@@ -1,0 +1,68 @@
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<div class="wrapper">
+
+  <div class="error-bar">
+      <% if flash[:notice] %>
+      <p><%= flash[:notice] %></p>
+      <% end %>
+  </div>
+
+  <div class="sub-wrapper">
+    <div class="side-bar">
+      <%= render "shared/side_bar" %>
+    </div>
+
+    <div class="main-bar">
+      
+      <div class="show-contents">
+        <div class="buttons">
+          <% if user_signed_in? && (current_user.id == @diary.user_id) %>
+            <%= link_to 'Edit', edit_diary_path(@diary), class: "link" %>
+            <%= link_to 'Delete', diary_path(@diary), method: :delete, class: "link"  %>
+          <% end %>
+        </div>
+
+        <div class="show-date">
+          ･ー <%= @diary.diary_date.year %>/<%= @diary.diary_date.month %>/<%= @diary.diary_date.day %> ー･
+        </div>
+
+        <div class="show-body">
+          <div class="show-body-left">
+            <div class="show-content upper">
+              <span class="content-title">Title:</span>
+              <%= @diary.title %>
+            </div>
+
+            <div class="show-content lower">
+              <div class="content-title">Text:</div>
+              <% if @diary.text.present? %>
+                <%= @diary.text %>
+              <% else %>
+                <div class="no-attached">本文はありません</div>
+              <% end %>
+            </div>
+          </div>
+
+          <div class="show-body-right">
+            <div class="show-content right">
+              <div class="content-title">Image:</div>
+              <% if @diary.images.attached? %>
+                <div class="slider">
+                  <% @diary.images.each do |image| %>
+                    <%= image_tag image %>
+                  <% end %>
+                </div>
+              <% else %>
+                <div class="no-attached">画像はありません</div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,44 @@
+.header-wrapper{
+  background-color: rgb(123, 158, 176);
+  height: 15vh;
+}
+
+.header-lists{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+
+
+.left-header{
+  display: flex;
+}
+
+
+
+.right-header{
+  display: flex;
+  align-items: center;
+}
+
+.right-list1{
+  margin-right: 50px;
+  color: rgb(2, 24, 110);
+}
+
+.login-name{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.right-list2{
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-right:50px;
+}
+
+.right-list2 .link{
+  color: rgb(249, 248, 236);
+}

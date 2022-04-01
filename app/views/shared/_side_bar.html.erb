@@ -1,0 +1,17 @@
+<div class="side-wrapper">
+  <div class="side-title">
+    Today's Diaries
+  </div>
+
+  <div class="side-date">
+    <%= Date.today.year %>/<%= Date.today.month %>/<%= Date.today.day %>
+  </div>
+
+  <% @datas.each do |data| %>
+    <div class="today-data">
+      <%= link_to data.user.name, user_path(data.user), class:"link1" %>
+      <span>:</span>
+      <%= link_to data.title, diary_path(data), class:"link2" %>
+    </div>
+  <% end %>
+</div>

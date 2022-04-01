@@ -1,0 +1,26 @@
+<div class="header-wrapper">
+
+  <div class="header-lists">
+
+    <div class="left-header">
+      <%= image_tag 'real-me-diary_logo.png', size: '400x80' %>
+    </div>
+
+    <div class="right-header">
+      <% if user_signed_in? %>
+        <li class="right-list1">こんにちは、<span class="login-name"><%= current_user.name %></span>さん</li>
+        <div class="right-list2-group">
+          <li class="right-list2"><%= link_to 'MyPage', user_path(current_user), class:"link" %></li>
+          <li class="right-list2"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"link" %></li>
+        </div>
+      <% else %>
+        <div class="right-list2-group">
+          <li class="right-list2"><%= link_to 'Login', new_user_session_path, class:"link" %></li>
+          <li class="right-list2"><%= link_to 'SignUp', new_user_registration_path, class:"link" %></li>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,69 @@
+.show-contents{
+  margin-top: 20px;
+}
+
+.show-content{
+  margin-bottom: 10px;
+  background-color: rgb(249, 248, 236);
+  padding: 15px 25px;
+  border-radius: 30px;
+  width: 450px;
+}
+
+.show-content img{
+  display: block;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.no-attached{
+  color: lightgray;
+  text-align: center;
+}
+
+.show-date{
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Caveat', cursive;
+  color: rgb(2, 24, 110);
+  text-align: center;
+}
+
+.content-title{
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(80, 147, 180);
+  margin: 0 20px 5px 0;
+}
+
+.buttons{
+  text-align: center;
+}
+
+.buttons .link{
+  margin-right: 10px;
+  padding: 3px 10px;
+  font-size: 15px;
+  font-family: 'Caveat', cursive;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(2, 24, 110);
+  color: rgb(249, 248, 236);
+  float: right;
+}
+
+.show-body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower{
+  height: 430px;
+}
+
+.right{
+  height: 510px;
+}
