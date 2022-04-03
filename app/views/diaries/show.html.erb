@@ -46,11 +46,11 @@
             <div class="show-content right">
               <div class="content-title">Image:</div>
               <% if @diary.images.attached? %>
-                <% @diary.images.each do |image| %>
-                  <div class="slider">
+                <div class="slider">
+                  <% @diary.images.each do |image| %>
                     <%= image_tag image %>
-                  </div>
-                <% end %>
+                  <% end %>
+                </div>
               <% else %>
                 <div class="no-attached">画像はありません</div>
               <% end %>
