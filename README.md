@@ -8,13 +8,14 @@ RealMeDiary
 
 ## URL
 https://real-me-diary.herokuapp.com/
+(一定時間過ぎた画像は表示されなくなります。)
 
 
 ## テスト用アカウント
-ユーザー１<br>
+- ユーザー１<br>
   メールアドレス： test@test<br>
   パスワード： test1111<br>
-ユーザー２<br>
+- ユーザー２<br>
   メールアドレス： test2@test<br>
   パスワード： test2222<br>
 
@@ -59,9 +60,6 @@ CSSは全て自分でデザイン・実装し、自分のイメージしたコ�
 当アプリケーションではわざと、1ユーザーにつき日記投稿が1日1つまでしかできないように設定している。理由としては、制限をつけることで、その日の自分により真剣に向き合うことができると考えたからである。
 
 
-## 実装した機能についての画像やGIFおよびその説明
-
-
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/b37a57d24ba98d6b5cec8de34aa2ff48.png)](https://gyazo.com/b37a57d24ba98d6b5cec8de34aa2ff48)
 
@@ -70,7 +68,46 @@ CSSは全て自分でデザイン・実装し、自分のイメージしたコ�
 [![Image from Gyazo](https://i.gyazo.com/20a341b490ad2bdd0275f679d256e44b.png)](https://gyazo.com/20a341b490ad2bdd0275f679d256e44b)
 
 
-## 開発環境
-## ローカルでの動作方法
-## 実装予定の機能
+## 実装した機能についての画像やGIFおよびその説明
+1. ログイン機能
+[![Image from Gyazo](https://i.gyazo.com/ab275922039db396993f59fbeccaf888.gif)](https://gyazo.com/ab275922039db396993f59fbeccaf888)
 
+2. 日記投稿機能
+[![Image from Gyazo](https://i.gyazo.com/9679b0e3d0709ef71287658e36a0ba06.gif)](https://gyazo.com/9679b0e3d0709ef71287658e36a0ba06)
+
+3. 日記詳細機能
+[![Image from Gyazo](https://i.gyazo.com/a6b17b5674893508823fc08b2188924f.gif)](https://gyazo.com/a6b17b5674893508823fc08b2188924f)
+
+4. ユーザー詳細機能
+[![Image from Gyazo](https://i.gyazo.com/7f321e61db3338f4f523edc67cf8161b.gif)](https://gyazo.com/7f321e61db3338f4f523edc67cf8161b)
+
+5. 日記編集機能
+[![Image from Gyazo](https://i.gyazo.com/1623e6b56c8e77283141e24751644174.gif)](https://gyazo.com/1623e6b56c8e77283141e24751644174)
+
+6. 日記削除機能
+[![Image from Gyazo](https://i.gyazo.com/5cd6af56a62e87a6cc964cefaca82d9c.gif)](https://gyazo.com/5cd6af56a62e87a6cc964cefaca82d9c)
+
+
+## 開発環境
+- Ruby/Ruby on rails/javascript/jQuery/MySQL/Github/AWS/Visual Studio Code
+- フロントエンド
+- バックエンド
+- インフラ
+- テスト
+- テキストエディタ
+- タスク管理
+
+
+## ローカルでの動作方法
+以下のコマンドを順に実行。
+% git clone https://github.com/jiheekwon/RealMeDiary
+% cd RealMeDiary
+% bundle install
+% yarn install
+
+
+## 実装予定の機能
+1. 画像トリミング機能
+現在、画像は投稿されたものの中央から正方形に切り取られて表示されている。今後の実装では、ユーザー側で正方形に切り取る範囲を選択できるように、トリミング機能を付けたい。
+2. 画像のデータ保存
+デプロイ環境だと、今のままでは投稿された画像が一定時間後に見られなくなる。AWSのS3を使用するなどして、画像データが保存されるようにしたい。
