@@ -29,16 +29,18 @@
           <div class="show-body-left">
             <div class="show-content upper">
               <span class="content-title">Title:</span>
-              <%= @diary.title %>
+              <span class="title-field"><%= @diary.title %></span>
             </div>
 
             <div class="show-content lower">
               <div class="content-title">Text:</div>
-              <% if @diary.text.present? %>
-                <%= @diary.text %>
-              <% else %>
-                <div class="no-attached">本文はありません</div>
-              <% end %>
+              <div class="text-field">
+                <% if @diary.text.present? %>
+                  <%= @diary.text %>
+                <% else %>
+                  <div class="no-attached">本文はありません</div>
+                <% end %>
+              </div>
             </div>
           </div>
 

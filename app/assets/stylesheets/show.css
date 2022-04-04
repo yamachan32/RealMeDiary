@@ -60,6 +60,17 @@
   justify-content: space-between;
 }
 
+.title-field{
+  color: rgb(2, 24, 110);
+}
+
+.text-field{
+  color: rgb(2, 24, 110);
+  padding: 0 5px;
+  height: 345px;
+  overflow: scroll;
+}
+
 .lower{
   height: 430px;
 }
