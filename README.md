@@ -99,11 +99,11 @@ CSSは全て自分でデザイン・実装し、自分のイメージしたコ�
 
 
 ## ローカルでの動作方法
-以下のコマンドを順に実行。
-% git clone https://github.com/jiheekwon/RealMeDiary
-% cd RealMeDiary
-% bundle install
-% yarn install
+以下のコマンドを順に実行。<br>
+% git clone https://github.com/jiheekwon/RealMeDiary<br>
+% cd RealMeDiary<br>
+% bundle install<br>
+% yarn install<br>
 
 
 ## 実装予定の機能
