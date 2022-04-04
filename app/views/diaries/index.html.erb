@@ -1,19 +1,18 @@
 <div class="wrapper">
 
-  <div class="error-bar">
-      <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
-      <% end %>
-  </div>
-
   <div class="sub-wrapper">
     <div class="side-bar">
       <%= render "shared/side_bar" %>
     </div>
 
     <div class="main-bar">
-      <% if user_signed_in? %>
+      <div class="error-bar">
+          <% if flash[:notice] %>
+          <p><%= flash[:notice] %></p>
+          <% end %>
+      </div>
 
+      <% if user_signed_in? %>
         <div class="main-icon">
           <% if @diary_count<1 %>
             <%= link_to new_diary_path, class:"link" do %>

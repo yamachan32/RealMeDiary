@@ -51,6 +51,7 @@ class DiariesController < ApplicationController
     @diary = Diary.find(params[:id])
     if @diary.update(diary_params)
       redirect_to diary_path(@diary)
+      flash[:notice] = "編集完了！"
     else
       render :edit
     end

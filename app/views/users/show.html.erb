@@ -1,10 +1,5 @@
 <div class="wrapper">
 
-  <div class="error-bar">
-      <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
-      <% end %>
-  </div>
 
   <div class="sub-wrapper">
     <div class="side-bar">
@@ -12,6 +7,12 @@
     </div>
 
     <div class="main-bar">
+      <div class="error-bar">
+          <% if flash[:notice] %>
+          <p><%= flash[:notice] %></p>
+          <% end %>
+      </div>
+
       <div class="main-icon">
         <% if user_signed_in? && (current_user.id == @user.id) && @diary_count<1 %>
           <%= link_to new_diary_path, class:"link" do %>

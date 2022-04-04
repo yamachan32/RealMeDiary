@@ -6,5 +6,10 @@
 
 .error-message {
   font-size: 1.3vw;
-  color: rgb(182, 48, 0);
+  color: red;
+}
+
+.error-bar{
+  text-align: center;
+  color: red;
 }

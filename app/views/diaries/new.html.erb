@@ -1,17 +1,16 @@
 <div class="wrapper">
-
-  <div class="error-bar">
-      <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
-      <% end %>
-  </div>
-
   <div class="sub-wrapper">
     <div class="side-bar">
       <%= render "shared/side_bar" %>
     </div>
 
     <div class="main-bar">
+      <div class="error-bar">
+          <% if flash[:notice] %>
+          <p><%= flash[:notice] %></p>
+          <% end %>
+      </div>
+
       <%= form_with model: @diary, url: diaries_path, id: "new_edit", local: true do |f| %>
 
         <%= render 'shared/error_messages', model: f.object %>
